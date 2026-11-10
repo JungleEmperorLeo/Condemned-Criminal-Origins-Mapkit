@@ -1,0 +1,148 @@
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+AllTextureDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ProjectBar.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ProjectTabControlBar.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ProjectTabCtrl.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+DEdit.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+dedit_concommand.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ClassListDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+leveltexturesdlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ObjectSearchDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+PropPageOptionsMisc.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+RenameResourceDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+SpriteEditDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+TextureSearchReplaceDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+RegionDoc.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+draw_d3d.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\draw\draw_d3d.cpp(1253): warning C4838: conversion from 'unsigned int' to 'LONG' requires a narrowing conversion
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\draw\draw_d3d.cpp(1253): warning C4838: conversion from 'unsigned int' to 'LONG' requires a narrowing conversion
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+DrawBase.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+CObjInterface.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+MainFrm.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+EditHelpers.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ModelDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+NodeView.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+OptionsBase.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+PrefabDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\PrefabDlg.cpp(326): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+CreatePrimitive.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+EditClipboard.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+ViewFunctions.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+SoundDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+SpriteDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+FXDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+TextureDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+UpdateAllObjects.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+RegionView.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+WorldsDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+EditObjects.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+Terrain.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+cl : Command line warning D9035 : option 'Zc:forScope-' has been deprecated and will be removed in a future release
+MaterialDlg.cpp
+C:\Users\Owl\Desktop\LTJ\tools\DEdit\Frames\flattoolbar.h(189): warning C4005: '_countof': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(27): note: see previous definition of '_countof'
+   Creating library C:\Users\Owl\Desktop\LTJ\build\dedit\release\DEdit.lib and object C:\Users\Owl\Desktop\LTJ\build\dedit\release\DEdit.exp

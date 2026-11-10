@@ -1,0 +1,2 @@
+sdk_inc_ltengineobjects.obj : error LNK2019: unresolved external symbol "class ILTServer * g_pLTServer" (?g_pLTServer@@3PAVILTServer@@A) referenced in function "public: virtual unsigned int __thiscall BaseClass::EngineMessageFn(unsigned int,void *,float)" (?EngineMessageFn@BaseClass@@UAEIIPAXM@Z)
+C:\Users\Owl\Desktop\LTJ\build\dedit\release\DEdit.exe : fatal error LNK1120: 1 unresolved externals
