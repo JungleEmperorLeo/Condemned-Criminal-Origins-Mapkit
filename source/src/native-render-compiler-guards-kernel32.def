@@ -1,0 +1,7 @@
+LIBRARY KERNEL32.dll
+EXPORTS
+LoadLibraryA
+LoadLibraryExA
+GetProcAddress
+FreeLibrary
+VirtualQuery

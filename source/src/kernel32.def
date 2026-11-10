@@ -1,0 +1,20 @@
+LIBRARY KERNEL32.dll
+EXPORTS
+ GetFullPathNameA
+ FindFirstFileA
+ FindNextFileA
+ FindClose
+ GetPrivateProfileStringA
+ GetEnvironmentVariableA
+ GetModuleFileNameA
+ lstrcpyA
+ lstrcpynA
+ lstrlenA
+ CreateFileA
+ WriteFile
+ ReadFile
+ GetFileSize
+ VirtualAlloc
+ VirtualFree
+ CloseHandle
+ ExitProcess

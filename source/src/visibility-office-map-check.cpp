@@ -1,0 +1,20 @@
+#include "WorldPacker.cpp"
+#include "OfficeVisibilityBlock.h"
+extern "C" __declspec(dllimport) void WINAPI ExitProcess(unsigned int);
+#pragma comment(linker,"/alternatename:__imp__ExitProcess@4=__imp__ExitProcess")
+extern "C" void HarnessEntry(){
+ char input[MAX_PATH],output[MAX_PATH],offsetPath[MAX_PATH];if(!GetEnvironmentVariableA("FEAR_READER_INPUT",input,MAX_PATH)||!GetEnvironmentVariableA("FEAR_VISIBILITY_OUTPUT",output,MAX_PATH)||!GetEnvironmentVariableA("FEAR_OFFSET_INPUT",offsetPath,MAX_PATH))ExitProcess(1);
+ WorldText::Vec3 offset={};DWORD done;HANDLE f=CreateFileA(offsetPath,GENERIC_READ,FILE_SHARE_READ,0,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,0);if(f==INVALID_HANDLE_VALUE||GetFileSize(f,0)!=12||!ReadFile(f,&offset,12,&done,0)||done!=12||!WorldText::FiniteVector(offset))ExitProcess(2);CloseHandle(f);
+ PrefabScene::Source source;if(!source.Load(input))ExitProcess(3);void* expansionStorage=VirtualAlloc(0,sizeof(PrefabScene::Expansion),MEM_COMMIT|MEM_RESERVE,4);if(!expansionStorage)ExitProcess(6);PrefabScene::Expansion* expanded=new(expansionStorage) PrefabScene::Expansion;if(!expanded->Build(input,source.scene))ExitProcess(40);const PrefabScene::Model& model=expanded->Scene();unsigned int count=0;
+ for(const PrefabScene::Node* node=model.first;node;node=node->next){const PrefabScene::Node& n=*node;if(n.kind!=1)continue;if(FearBrushFlags::Equal(n.type,"ExtrudeSector")||FearBrushFlags::Equal(n.type,"SemiExtrudeSector"))ExitProcess(4);if(FearBrushFlags::Equal(n.type,"Sector"))count++;}
+ if(!count||count>5000)ExitProcess(5);PrefabScene::Arena memory;StreamingSplit::Bounds* bounds=(StreamingSplit::Bounds*)memory.Allocate(count*sizeof(StreamingSplit::Bounds));const char** names=(const char**)memory.Allocate(count*sizeof(char*));OfficeSectorPortals::PreparedSector* sectors=(OfficeSectorPortals::PreparedSector*)memory.Allocate(count*sizeof(OfficeSectorPortals::PreparedSector));if(!bounds||!names||!sectors)ExitProcess(6);unsigned int index=0;
+ for(const PrefabScene::Node* node=model.first;node;node=node->next){
+  const PrefabScene::Node& n=*node;if(n.kind!=1||!FearBrushFlags::Equal(n.type,"Sector"))continue;const WorldText::Geometry& g=n.geometry;if(g.polygons!=6)ExitProcess(7);names[index]=n.name;OfficeSectorPortals::PreparedSector& sector=sectors[index];sector.count=g.polygons;sector.faces=(SectorOrientation::Face*)memory.Allocate(sector.count*sizeof(SectorOrientation::Face));if(!sector.faces)ExitProcess(6);for(unsigned int a=0;a<3;a++){bounds[index].low[a]=1e30f;bounds[index].high[a]=-1e30f;}
+  for(unsigned int j=0;j<g.polygons;j++){const WorldText::Polygon& poly=g.faces[j];if(poly.count!=4)ExitProcess(8);SectorOrientation::Face& face=sector.faces[j];face.count=poly.count;face.points=(WorldText::Vec3*)memory.Allocate(face.count*12);if(!face.points)ExitProcess(6);for(unsigned int k=0;k<poly.count;k++){if(poly.indices[k]>=g.points)ExitProcess(9);const WorldText::Vec3& p=g.vertices[poly.indices[k]];WorldText::Vec3& v=face.points[k];v.x=p.x-offset.x;v.y=p.y-offset.y;v.z=p.z-offset.z;for(unsigned int a=0;a<3;a++){float value=(&v.x)[a];if(value<bounds[index].low[a])bounds[index].low[a]=value;if(value>bounds[index].high[a])bounds[index].high[a]=value;}}}
+  bool flipped;SectorPreparation::Failure failure;if(!SectorPreparation::Prepare(sector.faces,sector.count,flipped,failure))ExitProcess(20+(unsigned int)failure);index++;
+ }
+ OfficeVisibilityBlock::Rectangular block;if(!block.Build(bounds,names,count,sectors)){char diagnosticPath[MAX_PATH];if(GetEnvironmentVariableA("FEAR_VISIBILITY_DIAGNOSTIC",diagnosticPath,MAX_PATH)){const char* reason=block.portalBuilder.error?block.portalBuilder.error:"Tree or intersection failure";HANDLE diagnostic=CreateFileA(diagnosticPath,0x40000000,FILE_SHARE_READ,0,2,FILE_ATTRIBUTE_NORMAL,0);DWORD written;WriteFile(diagnostic,reason,lstrlenA(reason),&written,0);CloseHandle(diagnostic);}ExitProcess(30);}f=CreateFileA(output,0x40000000,FILE_SHARE_READ,0,2,FILE_ATTRIBUTE_NORMAL,0);if(f==INVALID_HANDLE_VALUE||!WriteFile(f,block.data,block.size,&done,0)||done!=block.size)ExitProcess(31);CloseHandle(f);ExitProcess(0);
+}
+
+
+

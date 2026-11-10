@@ -1,0 +1,41 @@
+#pragma once
+#include "WorldModels.h"
+// Office-specific direct class registration profile; source evidence in office-verification/source-class-metadata.json.
+static WorldModels::ClassKind ResolveOffice(const PrefabScene::Node& n,void*){
+ if(FearBrushFlags::Equal(n.className,"CommandObject"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"ConstraintLimitedHinge"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"ConstraintPoint"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"ConstraintRagdoll"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"ConstraintWheel"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"ControlPoint"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"EventCounter"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"Explosion"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"Flicker"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"GameStartPoint"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"GearItem"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"Group"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"KeyFramer"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"LightPoint"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"LightPointFill"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"LightSpot"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"LookAtTrigger"))return WorldModels::WorldModel;
+ if(FearBrushFlags::Equal(n.className,"ObjectRemover"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"PhysicsCollisionSystem"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"PhysicsShapeCapsule"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"PhysicsShapeOBB"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"PhysicsShapeSphere"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"RefillStation"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"RenderTarget"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"RenderTargetGroup"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"SkyCamera"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"SkyPointer"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"SlidingSwitch"))return WorldModels::WorldModel;
+ if(FearBrushFlags::Equal(n.className,"SoundFX"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"SpecialFX"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"StartupCommand"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"Trigger"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"WeaponItem"))return WorldModels::Ordinary;
+ if(FearBrushFlags::Equal(n.className,"WorldModel"))return WorldModels::WorldModel;
+ if(FearBrushFlags::Equal(n.className,"WorldProperties"))return WorldModels::Ordinary;
+ return WorldModels::Unknown;
+}

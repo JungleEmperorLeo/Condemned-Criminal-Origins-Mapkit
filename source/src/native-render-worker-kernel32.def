@@ -1,0 +1,13 @@
+LIBRARY KERNEL32.dll
+EXPORTS
+GetCommandLineA
+GetStdHandle
+GetCurrentProcessId
+MoveFileExA
+DeleteFileA
+SetErrorMode
+MultiByteToWideChar
+CompareStringOrdinal
+LoadLibraryExA
+FreeLibrary
+VirtualQuery

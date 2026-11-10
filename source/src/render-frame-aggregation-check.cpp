@@ -1,0 +1,6 @@
+#include "WorldPacker.cpp"
+#include "RenderAttributes.h"
+#include "RenderFrameAggregation.h"
+extern "C" __declspec(dllimport) void WINAPI ExitProcess(unsigned int);
+#pragma comment(linker,"/alternatename:__imp__ExitProcess@4=__imp__ExitProcess")
+extern "C" void HarnessEntry(){char input[MAX_PATH],output[MAX_PATH];if(!GetEnvironmentVariableA("FEAR_VERTEX_INPUT",input,MAX_PATH)||!GetEnvironmentVariableA("FEAR_VERTEX_OUTPUT",output,MAX_PATH))ExitProcess(1);HANDLE in=CreateFileA(input,GENERIC_READ,FILE_SHARE_READ,0,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,0);DWORD done;unsigned int count=0;if(in==INVALID_HANDLE_VALUE||!ReadFile(in,&count,4,&done,0)||done!=4||count>100000)ExitProcess(2);PrefabScene::Arena memory;RenderFrameSort::Record* records=(RenderFrameSort::Record*)memory.Allocate((count+1)*72);if(!records||!ReadFile(in,records,count*72,&done,0)||done!=count*72)ExitProcess(3);CloseHandle(in);RenderFrameAggregation::Frame* frames=(RenderFrameAggregation::Frame*)memory.Allocate((count+1)*sizeof(RenderFrameAggregation::Frame));if(!frames||!RenderFrameSort::Build(records,count)||!RenderFrameAggregation::Build(records,count,frames))ExitProcess(4);HANDLE out=CreateFileA(output,0x40000000,FILE_SHARE_READ,0,2,FILE_ATTRIBUTE_NORMAL,0);if(out==INVALID_HANDLE_VALUE||!WriteFile(out,frames,count*40,&done,0)||done!=count*40)ExitProcess(5);CloseHandle(out);ExitProcess(0);}

@@ -1,0 +1,6 @@
+#include "WorldPacker.cpp"
+#include "ObjectsBlock.h"
+extern "C" __declspec(dllimport) void WINAPI ExitProcess(unsigned int);
+#pragma comment(linker,"/alternatename:__imp__ExitProcess@4=__imp__ExitProcess")
+static bool Include(const PrefabScene::Node& n){return FearBrushFlags::Equal(n.className,"LightPoint")||FearBrushFlags::Equal(n.className,"WorldProperties")||FearBrushFlags::Equal(n.className,"GameStartPoint")||FearBrushFlags::Equal(n.className,"WorldModel");}
+extern "C" void HarnessEntry(){char input[MAX_PATH],output[MAX_PATH];if(!GetEnvironmentVariableA("FEAR_READER_INPUT",input,MAX_PATH)||!GetEnvironmentVariableA("FEAR_OBJECTS_OUTPUT",output,MAX_PATH))ExitProcess(1);PrefabScene::Source source;if(!source.Load(input))ExitProcess(2);void* sceneStorage=VirtualAlloc(0,sizeof(PrefabScene::Expansion),MEM_COMMIT|MEM_RESERVE,4);if(!sceneStorage)ExitProcess(3);PrefabScene::Expansion* expanded=new(sceneStorage) PrefabScene::Expansion;if(!expanded->Build(input,source.scene))ExitProcess(3);WorldText::Vec3 offset={-5888.0f,1024.0f,512.0f};ObjectsBlock::Block block;if(!block.Build(expanded->Scene(),Include,offset))ExitProcess(4);HANDLE f=CreateFileA(output,0x40000000,FILE_SHARE_READ,0,2,FILE_ATTRIBUTE_NORMAL,0);DWORD done;if(f==INVALID_HANDLE_VALUE||!WriteFile(f,block.data,block.size,&done,0)||done!=block.size)ExitProcess(5);CloseHandle(f);ExitProcess(0);}

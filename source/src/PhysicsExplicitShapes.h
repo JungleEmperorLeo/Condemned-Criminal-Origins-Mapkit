@@ -1,0 +1,19 @@
+#pragma once
+#include "PhysicsOwnerBounds.h"
+#include "ObjectsBlock.h"
+namespace PhysicsExplicitShapes {
+inline const PrefabScene::Property* Property(const PrefabScene::Node& n,const char* key){for(const PrefabScene::Property* p=n.properties;p;p=p->next)if(FearBrushFlags::Equal(p->name,key))return p;return 0;}
+inline bool Number(const PrefabScene::Node& n,const char* key,float& value){const PrefabScene::Property* p=Property(n,key);WorldText::Document d;return p&&d.Parse(p->data,lstrlenA(p->data))&&d.Elements(0)==1&&d.Number(d.First(0),value)&&WorldText::Finite(value);}
+inline bool Vector(const PrefabScene::Node& n,const char* key,WorldText::Vec3& value){const PrefabScene::Property* p=Property(n,key);if(!p)return false;WorldText::Document d;if(!d.Parse(p->data,lstrlenA(p->data)))return false;unsigned int form=d.First(0),inner=d.Next(d.First(form));return d.tokens[inner].list&&d.Vector(inner,value);}
+inline bool SourcePosition(const PrefabScene::Node& owner,const PrefabScene::Node& shape,WorldText::Vec3& value){if(!FearBrushFlags::Equal(owner.source,shape.source))return false;WorldText::Vec3 p,q,r;PrefabScene::Matrix rotation;return Vector(shape,"Pos",p)&&Vector(owner,"Pos",q)&&Vector(owner,"Rotation",r)&&PrefabScene::Matrix::Euler(r,rotation)&&PhysicsOwnerBounds::LocalPoint(&rotation.m[0][0],q,p,value);}
+inline bool Center(const WorldModels::Partition& p,unsigned int group,const WorldText::Vec3& offset,WorldText::Vec3& value){if(!group||group>=p.groupCount)return false;const PrefabScene::Node& owner=*p.groups[group].owner;PhysicsOwnerBounds::Bounds b;for(unsigned int i=0;i<p.assignmentCount;i++){const WorldModels::Assignment& a=p.assignments[i];if(a.group!=group)continue;for(unsigned int j=0;j<a.brush->geometry.points;j++){if(!PhysicsOwnerBounds::Referenced(a.brush->geometry,j))continue;WorldText::Vec3 local;if(!PhysicsOwnerBounds::ScenePoint(&owner.orientation.m[0][0],owner.position,a.brush->geometry.vertices[j],local,&offset)||!b.Add(local))return false;}}if(!b.count)return false;value=b.Center();return true;}
+inline bool Transform(const WorldModels::Partition& p,unsigned int group,const PrefabScene::Node& shape,const WorldText::Vec3& offset,float* output){const PrefabScene::Node& owner=*p.groups[group].owner;WorldText::Vec3 pos,center;if(!SourcePosition(owner,shape,pos)||!Center(p,group,offset,center))return false;output[0]=pos.x-center.x;output[1]=pos.y-center.y;output[2]=pos.z-center.z;
+ PrefabScene::Matrix inverse;for(unsigned int i=0;i<3;i++)for(unsigned int j=0;j<3;j++)inverse.m[i][j]=owner.orientation.m[j][i];PrefabScene::Matrix relative=inverse.Times(shape.orientation);return ObjectsBlock::Quaternion(relative,output+3);
+}
+inline bool Build(const WorldModels::Partition& p,unsigned int group,const PrefabScene::Node& shape,const WorldText::Vec3& offset,unsigned int& kind,float* body,float* transform){float mass=0,density=0;if(!Number(shape,"MassKg",mass)||!Number(shape,"DensityG",density))return false;
+ if(FearBrushFlags::Equal(shape.className,"PhysicsShapeOBB")){kind=2;WorldText::Vec3 dims;if(!Vector(shape,"Dims",dims)||!PhysicsPrimitives::OBB(mass,density,dims,body))return false;return Transform(p,group,shape,offset,transform);}
+ if(FearBrushFlags::Equal(shape.className,"PhysicsShapeSphere")){kind=3;float radius=0;if(!Number(shape,"Radius",radius)||!PhysicsPrimitives::Sphere(mass,density,radius,body))return false;return Transform(p,group,shape,offset,transform);}
+ if(FearBrushFlags::Equal(shape.className,"PhysicsShapeCapsule")){kind=7;float radius=0,length=0;WorldText::Vec3 pos;if(!Number(shape,"Radius",radius)||!Number(shape,"Length",length)||!SourcePosition(*p.groups[group].owner,shape,pos))return false;return PhysicsOwnerBounds::CapsuleGroup(p,group,shape,mass,density,radius,length,body,&offset,&pos);}
+ return false;
+}
+}
