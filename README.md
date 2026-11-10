@@ -4,8 +4,7 @@ Condemned Mapkit
 Ported from the LithTech 1.0 DEdit source onto jsj2008/lithtech (commit 0eab182).
 This folder is the Jupiter source (the parts DEdit needs: tools\DEdit, tools\shared,
 tools\PreProcessor, sdk and the libs it uses) with the changes already applied.
-The source ships as jupiter-source.zip; build_dedit.bat (or extract_source.bat) unpacks it
-here on first run, overwriting the earlier loose copies of the changed files.
+This project is built ontop of Lithtech Jupiter's leaked source code so it's a good idea to extract this ontop of that.
 ltj-terrain-lightpreview.patch is the same change as a patch against the original
 repo (git apply, from the repo root).
 
