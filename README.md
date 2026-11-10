@@ -9,9 +9,6 @@ here on first run, overwriting the earlier loose copies of the changed files.
 ltj-terrain-lightpreview.patch is the same change as a patch against the original
 repo (git apply, from the repo root).
 
-NOTHING HAS BEEN COMPILED: the machine that did the port doesn't have MFC/DirectX.
-Expect to fix a typo or two on the first build.
-
 BUILD
 -----
 Needs Visual Studio 2017+ or Build Tools with "Desktop development with C++" and the
