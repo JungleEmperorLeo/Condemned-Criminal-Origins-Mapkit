@@ -1,4 +1,4 @@
-DEdit for Jupiter: Terrain tools + Lighting Preview
+Condemned Mapkit
 ===================================================
 
 Ported from the LithTech 1.0 DEdit source onto jsj2008/lithtech (commit 0eab182).
@@ -8,6 +8,8 @@ The source ships as jupiter-source.zip; build_dedit.bat (or extract_source.bat) 
 here on first run, overwriting the earlier loose copies of the changed files.
 ltj-terrain-lightpreview.patch is the same change as a patch against the original
 repo (git apply, from the repo root).
+
+Also includes Ihor's version of WorldEdit and his Winpacker.
 
 BUILD
 -----
