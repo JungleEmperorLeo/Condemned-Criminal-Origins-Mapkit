@@ -28,6 +28,8 @@ Build-only additions: tools\DEdit\Misc\DEditStubs.cpp, tools\DEdit\build\compat\
 a DECIMAL->LTA_DECIMAL rename in libs\ltamgr\ltaconverter.*, and a DX6 define in
 draw\draw_d3d.h (d3d9.h otherwise empties d3d.h).
 
+Make sure this is extracted ontop of Lithtech Jupiter's source code located here: https://github.com/jsj2008/lithtech
+
 NEW FILES
 ---------
 tools\DEdit\Terrain\Terrain.cpp/.h          Terrain tools
